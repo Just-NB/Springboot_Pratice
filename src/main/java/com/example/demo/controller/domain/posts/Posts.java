@@ -1,5 +1,6 @@
 package com.example.demo.controller.domain.posts;
 
+import com.example.demo.controller.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,7 +9,7 @@ import javax.persistence.*;
 
 @Getter @NoArgsConstructor // Lombok Annotation
 @Entity // JPA Annotation
-public class Posts {
+public class Posts extends BaseTimeEntity {
     // 실제 DB 테이블과 매칭될 클래스.
     @Id // PK 필드.
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK생성 규칙, IDENTITY -> auto_increment가 된다.
